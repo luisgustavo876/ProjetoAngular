@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      ETEC
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,14 +9,156 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">ETEC</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <h3>Projeto com Bootstrap e Ionic!</h3>
-    <hr>
-    <p>Componentes Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"> - UI Components</a></p>
-    <p>Componentes Bootstrap <a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com/docs/5.3/components/buttons/"> - UI Components</a></p>
-  </div>
+  <!-- menu superior -->
+
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="6" ></ion-col>
+    
+    <ion-segment value="DESENVOLVIMENTO_DE_SISTEMAS" (ionChange) = "trocouCurso($event)">
+      <ion-segment-button value="DESENVOLVIMENTO_DE_SISTEMAS">
+        <ion-label>DESENVOLVIMENTO_DE_SISTEMAS</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="ADM">
+        <ion-label>ADM</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="QUIMICA">
+        <ion-label>QUIMICA</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-row>
+
+  <!-- conteudo de desenvolvimento de sistemas -->
+  <ion-row class="ion-justify-content-center">
+    <ion-col size ="4">
+      <ion-card>
+        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/8476590/pexels-photo-8476590.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+        <ion-card-header>
+          <ion-card-title>PROGRAMAÇAO MOBILE</ion-card-title>
+          <ion-card-subtitle>PROGRAMAÇAO IONIC E BOOTSTRAP</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          programador senipor e junior vc é top em pae
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size ="4">
+      <ion-card>
+        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/10768295/pexels-photo-10768295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+        <ion-card-header>
+          <ion-card-title>ADM</ion-card-title>
+          <ion-card-subtitle>sempre fazendo o café dos outros</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          AQUI sao 3 anos de muita experiencia com cafés do mundo todo
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size ="4">
+      <ion-card>
+        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/4239088/pexels-photo-4239088.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+        <ion-card-header>
+          <ion-card-title>QUIMICA</ion-card-title>
+          <ion-card-subtitle>SEMPRE NA LIMPEZA</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          DESDE 2006 fazendo muita merda
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <!-- conteudo de ADM -->
+  <ion-row class="ion-justify-content-center">
+    <ion-col size ="4">
+      <ion-card>
+        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/8476590/pexels-photo-8476590.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+        <ion-card-header>
+          <ion-card-title>PROGRAMAÇAO MOBILE</ion-card-title>
+          <ion-card-subtitle>PROGRAMAÇAO IONIC E BOOTSTRAP</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          programador senipor e junior vc é top em pae
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size ="4">
+      <ion-card>
+        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/10768295/pexels-photo-10768295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+        <ion-card-header>
+          <ion-card-title>ADM</ion-card-title>
+          <ion-card-subtitle>sempre fazendo o café dos outros</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          AQUI sao 3 anos de muita experiencia com cafés do mundo todo
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size ="4">
+      <ion-card>
+        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/4239088/pexels-photo-4239088.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+        <ion-card-header>
+          <ion-card-title>QUIMICA</ion-card-title>
+          <ion-card-subtitle>SEMPRE NA LIMPEZA</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          DESDE 2006 fazendo muita merda
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  
+  <!-- conteudo de QUIMICA -->
+  <ion-row class="ion-justify-content-center">
+    <ion-col size ="4">
+      <ion-card>
+        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/8476590/pexels-photo-8476590.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+        <ion-card-header>
+          <ion-card-title>PROGRAMAÇAO MOBILE</ion-card-title>
+          <ion-card-subtitle>PROGRAMAÇAO IONIC E BOOTSTRAP</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          programador senipor e junior vc é top em pae
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size ="4">
+      <ion-card>
+        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/10768295/pexels-photo-10768295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+        <ion-card-header>
+          <ion-card-title>ADM</ion-card-title>
+          <ion-card-subtitle>sempre fazendo o café dos outros</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          AQUI sao 3 anos de muita experiencia com cafés do mundo todo
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size ="4">
+      <ion-card>
+        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/4239088/pexels-photo-4239088.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+        <ion-card-header>
+          <ion-card-title>QUIMICA</ion-card-title>
+          <ion-card-subtitle>SEMPRE NA LIMPEZA</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          DESDE 2006 fazendo muita merda
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+
 </ion-content>
