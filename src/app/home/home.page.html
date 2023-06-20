@@ -1,31 +1,83 @@
 <ion-content [fullscreen]="true">
 
-  <ion-row class = "ion-justify-content-center">
-    <ion-col size="10" size-lg = "6" class="ion-text-center full-height">
-      <ion-row>
-        <ion-col size="12">
-          <ion-card>
-            <img src="../../assets/pexels-skitterphoto-597054.jpg" width="400px">
-            <ion-item >
-              <ion-input label ="usuario"></ion-input>
-            </ion-item>
-            <ion-item >
-              <ion-input label ="senha"></ion-input>
-            </ion-item>
+    <div class="calc-main">
+      <div class="calc-display">
+        <ion-input type="number" [(ngModel)]="display" class="ion-text-end"></ion-input>
+      </div>
+      <ion-grid>
 
-            <ion-button routerLink="../main-page">
-              <ion-icon name="lock-closed-outline">
-              </ion-icon>
-              &nbsp; Acessar
-            </ion-button>
-          </ion-card>
-    
-        </ion-col>
-      </ion-row>
-    </ion-col>
-  </ion-row>
+        <ion-row>
+          <ion-col>
+            
+            <ion-button shape="null" color="light" *ngIf="!isc" (click)="click('ac')">AC</ion-button>
+            <ion-button shape="round" color="light" *ngIf="isc" (click)="click('c')">C</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button shape="null" color="light" (click)="click('+/-')">+/-</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button shape="null" color="light" (click)="click('%')">%</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button shape="null" color="warning" (click)="click(':')">:</ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button shape="null" color="dark" (click)="click('7')">7</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button shape="null" color="dark" (click)="click('8')">8</ion-button>
+          </ion-col>
+          <ion-col>null
+            <ion-button shape="null" color="dark" (click)="click('9')">9</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button shape="null" color="warning" (click)="click('X')">X</ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button shape="null" color="dark" (click)="click('4')">4</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button shape="null" color="dark" (click)="click('5')">5</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button shape="null" color="dark" (click)="click('6')">6</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button shape="null" color="warning" (click)="click('-')">-</ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button shape="null" color="dark" (click)="click('1')">1</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button shape="null" color="dark" (click)="click('2')">2</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button shape="null" color="dark" (click)="click('3')">3</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button shape="null" color="warning" (click)="click('+')">+</ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6">
+            <ion-button shape="null" color="dark" (click)="click('0')" class="double-width">0</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button shape="null" color="dark" (click)="click(',')">,</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button shape="null" color="warning" (click)="click('=')">=</ion-button>
 
-  <!-- form -->
+          </ion-col>
+        </ion-row>
+        
+      </ion-grid>
 
-  
-</ion-content>
+    </div>
+  </ion-content>
